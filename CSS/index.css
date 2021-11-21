@@ -3,19 +3,22 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Roboto", sans-serif;
 }
+
 div.outerbox {
   max-width: 600px;
   max-height: 640px;
   margin: auto;
   border: 1px solid #0000;
-  background-color: lightslategray;
+  background-color: lightsteelblue;
   border-radius: 30px;
   padding: 36px 83px 62px 83px;
   margin: 40px auto;
 }
+
 h1.createacc {
   font-family: "Roboto", sans-serif;
   text-align: center;
@@ -40,7 +43,9 @@ input[type="email"] {
   border: 1px solid white;
   margin: 10px 0 5px 0;
   padding-left: 10px;
+  font-size: medium;
 }
+
 div.singlerow {
   display: flex;
   flex-direction: row;
@@ -49,6 +54,7 @@ div.singlerow {
   /* border: 1px solid black; */
   width: 430px;
 }
+
 input[type="password"] {
   display: inline;
   width: 210px;
@@ -57,7 +63,9 @@ input[type="password"] {
   border: 1px solid white;
   margin: 10px 0;
   padding-left: 10px;
+  font-size: medium;
 }
+
 input::placeholder {
   /* text-align: center; */
   opacity: 0.5;
@@ -81,7 +89,6 @@ input[type="submit"]:hover {
 
 p {
   text-align: center;
-
   color: black;
   opacity: 0.5;
 }
@@ -90,6 +97,11 @@ p {
   text-decoration: none;
   font-size: small;
 }
+
 p:hover {
   opacity: 1;
+}
+
+a:visited {
+  color: black;
 }
