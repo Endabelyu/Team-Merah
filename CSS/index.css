@@ -11,7 +11,7 @@ div.outerbox {
   max-height: 640px;
   margin: auto;
   border: 1px solid #0000;
-  background-color: #f0f0f0;
+  background-color: lightslategray;
   border-radius: 30px;
   padding: 36px 83px 62px 83px;
   margin: 40px auto;
@@ -27,16 +27,19 @@ h1.createacc {
 label {
   font-size: 24px;
 }
+
 input {
   display: block;
 }
+
 input[type="text"],
 input[type="email"] {
   width: 430px;
-  height: 35px;
-  border-radius: 5px;
+  height: 45px;
+  border-radius: 10px;
   border: 1px solid white;
   margin: 10px 0 5px 0;
+  padding-left: 10px;
 }
 div.singlerow {
   display: flex;
@@ -49,13 +52,14 @@ div.singlerow {
 input[type="password"] {
   display: inline;
   width: 210px;
-  height: 35px;
-  border-radius: 5px;
+  height: 45px;
+  border-radius: 10px;
   border: 1px solid white;
   margin: 10px 0;
+  padding-left: 10px;
 }
 input::placeholder {
-  text-align: center;
+  /* text-align: center; */
   opacity: 0.5;
 }
 
@@ -68,7 +72,9 @@ input[type="submit"] {
   background-color: rgb(89, 191, 255);
   color: white;
   cursor: pointer;
+  font-size: large;
 }
+
 input[type="submit"]:hover {
   background-color: rgba(89, 191, 255, 0.5);
 }
@@ -79,8 +85,10 @@ p {
   color: black;
   opacity: 0.5;
 }
+
 .already {
   text-decoration: none;
+  font-size: small;
 }
 p:hover {
   opacity: 1;
