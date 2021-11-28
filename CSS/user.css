@@ -14,7 +14,7 @@ body{
 }
 
 .container {
-    width: 1500px;
+    width: 1400px;
     height: 700px;
 }
 
@@ -22,7 +22,14 @@ header>p {
     display: flex;
     justify-content: flex-end;
     font-size: 28px;
+    opacity: 50%;
 }
+
+header>p:hover{
+    opacity: 100%;
+    cursor:pointer;
+}
+
 .ava-name-rank {
     width: 80%;
     margin-bottom: 40px;
@@ -32,7 +39,8 @@ header>p {
 }
 
 .ava-name-rank >p {
-    font-size: 28px;
+    font-size: 48px;
+    line-height: 6;
 }
 
 .bio > p {
@@ -60,4 +68,10 @@ button{
     background-color: #ffffff;
     color: #C51414;
     font-size: 28px;
+}
+
+.delete-account>button:hover{
+    background-color: #C51414;
+    border: 0.5px solid #000;
+    color: #ffffff;
 }
