@@ -1,6 +1,9 @@
+/* CSS index.html */
+
 * {
   padding: 0;
   margin: 0;
+
   box-sizing: border-box;
 }
 
@@ -104,4 +107,89 @@ p:hover {
 
 a:visited {
   color: black;
+}
+
+/* css homepage html */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+}
+
+.h-homepage {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: wheat;
+  border-bottom: 20px;
+}
+
+.userhp {
+  text-decoration: none;
+  color: black;
+}
+
+.main-hp {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.kategori {
+  padding: 15px;
+}
+.kategori h4 {
+  margin-bottom: 10px;
+}
+.makanan {
+  /* background-color: cadetblue; */
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.lvl {
+  width: 240px;
+  height: 205px;
+  background-color: #f5e6e6;
+  text-align: center;
+  line-height: 200px;
+  margin-right: 20px;
+}
+
+.suku {
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.lvl1s {
+  width: 240px;
+  height: 205px;
+  background-color: #f5e6e6;
+  text-align: center;
+  line-height: 200px;
+}
+
+.lvlm,
+.lvls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leaderboard {
+  width: 430px;
+  height: 510px;
+  text-align: center;
+  background-color: darkgreen;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.rank {
+  margin: 15px 0;
+}
+
+.rank ol {
+  background-color: darkgrey;
+}
+
+footer {
+  padding: 10px;
 }
