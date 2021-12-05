@@ -90,7 +90,7 @@ input[type="submit"]:hover {
   background-color: rgba(89, 191, 255, 0.5);
 }
 
-p {
+.already {
   text-align: center;
   color: black;
   opacity: 0.5;
@@ -101,7 +101,7 @@ p {
   font-size: small;
 }
 
-p:hover {
+.already:hover {
   opacity: 1;
 }
 
@@ -192,4 +192,121 @@ a:visited {
 
 footer {
   padding: 10px;
+}
+
+/* CSS scorepage html */
+.schead {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: end;
+}
+.schead a {
+  text-decoration: none;
+  color: chartreuse;
+}
+.schead p {
+  margin: 20px 35px;
+  color: rgb(122, 9, 9);
+}
+
+.scmain {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.fstitle {
+  background-color: rgb(196, 196, 196);
+  border: 1px solid white;
+  height: 110px;
+  width: 475px;
+  margin: 10px auto;
+  border-radius: 20px;
+}
+
+.fstitle p {
+  font-size: 48px;
+  margin-top: 25px;
+}
+
+.tscore {
+  font-size: 120px;
+}
+
+.reportq {
+  margin: 10px auto;
+  display: flex;
+  width: 475px;
+  justify-content: space-around;
+}
+
+.reportq .true {
+  color: rgba(9, 120, 20, 1);
+}
+
+.reportq .false {
+  color: rgba(197, 20, 20, 1);
+}
+
+.buttonfs {
+  margin: 20px auto;
+  display: flex;
+  width: 475px;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.buttonfs a {
+  text-decoration: none;
+  color: black;
+}
+
+.buttonfs div {
+  background-color: rgb(196, 196, 196);
+  width: 140px;
+  height: 55px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.feedback {
+  font-size: 24px;
+  margin: 20px auto;
+  color: black;
+}
+
+.feedback p {
+  opacity: 0.5;
+}
+.feedback p:hover {
+  opacity: 1;
+}
+
+.fslead {
+  margin: 25px auto;
+}
+
+.fslead .title {
+  width: 370px;
+  height: 57px;
+  background-color: rgb(196, 196, 196);
+  margin: auto;
+  font-size: 36px;
+  line-height: 55px;
+  border-radius: 10px;
+}
+
+.fslead .rank {
+  margin: 20px auto;
+}
+.fslead .rank p {
+  margin: 10px auto;
+}
+
+.fslead .view {
+  color: black;
+  opacity: 0.5;
+}
+.fslead .view:hover {
+  opacity: 1;
 }
