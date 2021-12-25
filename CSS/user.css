@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1400px;
+    height: 700px;
+}
+
+header>p {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 28px;
+    opacity: 50%;
+}
+
+header>p:hover{
+    opacity: 100%;
+    cursor:pointer;
+}
+
+.ava-name-rank {
+    width: 80%;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.ava-name-rank >p {
+    font-size: 48px;
+    line-height: 6;
+}
+
+.bio > p {
+    font-size: 28px;
+    line-height: 2;
+}
+
+img {
+    border-radius: 50%;
+    height: 317px;
+    width: 311px;
+}
+
+.delete-account{
+    display: flex;
+    justify-content: center;
+
+}
+
+button{
+    width: 250px;
+    height: 60px;
+    border: 2px solid #C51414;
+    border-radius: 15px;
+    background-color: #ffffff;
+    color: #C51414;
+    font-size: 28px;
+}
+
+.delete-account>button:hover{
+    background-color: #C51414;
+    border: 0.5px solid #000;
+    color: #ffffff;
+}
