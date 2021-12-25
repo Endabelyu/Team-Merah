@@ -23,11 +23,11 @@ DROP TABLE IF EXISTS `kategori`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `kategori` (
-  `Nama` char(20) NOT NULL,
-  `Deskripsi` char(120) DEFAULT NULL,
-  `Logo` blob,
-  `Kategori_ID` char(10) NOT NULL,
-  PRIMARY KEY (`Kategori_ID`)
+  `nama` char(20) NOT NULL,
+  `deskripsi` char(120) DEFAULT NULL,
+  `logo` blob,
+  `kategori_id` bigint NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`kategori_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -48,10 +48,12 @@ DROP TABLE IF EXISTS `leaderboard`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `leaderboard` (
-  `User_ID` char(20) NOT NULL,
-  `Total_Score` int NOT NULL,
-  KEY `User_ID` (`User_ID`),
-  CONSTRAINT `leaderboard_ibfk_1` FOREIGN KEY (`User_ID`) REFERENCES `user` (`User_ID`)
+  `total_score` int NOT NULL,
+  `user_id` bigint NOT NULL,
+  `lb_id` bigint NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`lb_id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `leaderboard_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -72,13 +74,15 @@ DROP TABLE IF EXISTS `score`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `score` (
-  `User_ID` char(20) NOT NULL,
-  `Kategori_ID` char(10) NOT NULL,
-  `Score` int NOT NULL,
-  KEY `User_ID` (`User_ID`),
-  KEY `Kategori_ID` (`Kategori_ID`),
-  CONSTRAINT `score_ibfk_1` FOREIGN KEY (`User_ID`) REFERENCES `user` (`User_ID`),
-  CONSTRAINT `score_ibfk_2` FOREIGN KEY (`Kategori_ID`) REFERENCES `kategori` (`Kategori_ID`)
+  `user_id` bigint NOT NULL,
+  `kategori_id` bigint NOT NULL,
+  `score` int NOT NULL,
+  `score_id` bigint NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`score_id`),
+  KEY `user_id` (`user_id`),
+  KEY `kategori_id` (`kategori_id`),
+  CONSTRAINT `score_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
+  CONSTRAINT `score_ibfk_2` FOREIGN KEY (`kategori_id`) REFERENCES `kategori` (`kategori_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -99,17 +103,17 @@ DROP TABLE IF EXISTS `soal`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `soal` (
-  `Pertanyaan` text NOT NULL,
-  `Opsi_A` varchar(100) NOT NULL,
-  `Opsi_B` varchar(100) NOT NULL,
-  `Opsi_C` varchar(100) NOT NULL,
-  `Opsi_D` varchar(100) NOT NULL,
-  `Jawaban` varchar(100) NOT NULL,
-  `Penjelasan` text NOT NULL,
-  `Kategori_ID` char(10) NOT NULL,
-  `Level` int DEFAULT NULL,
-  KEY `Kategori_ID` (`Kategori_ID`),
-  CONSTRAINT `soal_ibfk_1` FOREIGN KEY (`Kategori_ID`) REFERENCES `kategori` (`Kategori_ID`)
+  `pertanyaan` text NOT NULL,
+  `opsi_a` varchar(100) NOT NULL,
+  `opsi_b` varchar(100) NOT NULL,
+  `opsi_c` varchar(100) NOT NULL,
+  `opsi_d` varchar(100) NOT NULL,
+  `jawaban` varchar(100) NOT NULL,
+  `penjelasan` text NOT NULL,
+  `kategori_id` bigint NOT NULL,
+  `level` int DEFAULT NULL,
+  KEY `kategori_id` (`kategori_id`),
+  CONSTRAINT `soal_ibfk_1` FOREIGN KEY (`kategori_id`) REFERENCES `kategori` (`kategori_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -130,11 +134,11 @@ DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user` (
-  `Username` char(15) NOT NULL,
-  `Email` char(254) NOT NULL,
-  `Password` char(60) NOT NULL,
-  `User_ID` char(20) NOT NULL,
-  PRIMARY KEY (`User_ID`)
+  `username` char(15) NOT NULL,
+  `email` char(254) NOT NULL,
+  `password` char(60) NOT NULL,
+  `user_id` bigint NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -156,4 +160,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-21 12:26:56
+-- Dump completed on 2021-11-24 23:42:21
